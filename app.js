@@ -44,7 +44,7 @@ const selectItem = (event, img) => {
   if (item === -1) {
     sliders.push(img);
   } else {
-    alert('Hey, Already added !')
+    element.remove()
   }
 }
 var timer
@@ -65,7 +65,6 @@ const createSlider = () => {
 
   sliderContainer.appendChild(prevNext)
   document.querySelector('.main').style.display = 'block';
-  // hide image aria
   imagesArea.style.display = 'none';
   const duration = document.getElementById('duration').value > 1000 || 3000;
   sliders.forEach(slide => {
